@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>如何创建Java开发环境</title>
+		<link rel="stylesheet" href="../style/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="../style/style.css" media="all" />
+	</head>
+	<body>
+		<div class="page">
+			<ul class="layui-nav">
+				<div class="nav">
+				    <li style="float:left"><img src="../img/logo.png" style="width:217px;height:40px;margin:10px;"/></li>
+					<li class="layui-nav-item"><a href="../index.html">首页</a></li>
+					<li class="layui-nav-item"><a href="../page/all.html">全部文章</a></li>
+					<li class="layui-nav-item"><a href="../page/download.html">资源下载</a></li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">小工具</a>
+						<dl class="layui-nav-child">
+							<dd><a href="../tools/llxs.html" target="_blank">流量消失器</a></dd>
+							<dd><a href="../layui/layui.html" target="_blank">layui镜像站</a></dd>
+							<dd><a href="../tools/dns.html" target="_blank">全国DNS表</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item"><a href="../page/about.html">关于</a></li>
+				</div>
+			</ul>
+			<div class="main">
+				<h1>如何创建Java开发环境</h1><br /><br />
+				<h2 id="yi">一、新建文件夹</h2>
+				<br />
+				<h4>打开Windows资源管理器，在 C:\Program Files (x86) 目录下新建文件夹"Java"，用于存放所需文件。</h4>
+				<img src="../img/howToJava_1.jpg" />
+				<br /><br />
+				<h2 id="er">二、下载JAVA开发工具包JDK</h2>
+				<br />
+				<a class="layui-btn layui-btn-primary" href="https://www.123pan.com/s/vlxcVv-sz5Sh.html">下载jdk1.8</a>
+				<br /><br /><br />
+				<h2 id="san">三、手动安装JDK</h2>
+				<br />
+				<h3 id="3.1">1.使用资源管理器解压JDK文件(速度较慢，建议使用其他解压软件)</h3>
+				<br />
+				<h4>(1)在下载好的JDK压缩包上右击-->打开方式-->Windows资源管理器。</h4>
+				<img src="../img/howToJava_2.jpg" />
+				<br /><br />
+				<h4>(2)在窗口上方功能区中单击"全部解压缩"。</h4>
+				<img src="../img/howToJava_3.jpg" />
+				<br /><br />
+				<h4>(3)单击"浏览"，选择第一步建立的文件夹 C:\Program Files (x86)\Java ，单击"提取"。</h4>
+				<img src="../img/howToJava_4.jpg" />
+				<br /><br />
+				<h3 id="3.2">2.复制JDK完整路径</h3>
+				<br />
+				<h4>(1)打开Windows资源管理器，找到提取出的文件，进入JDK的路径下。单击地址栏右边的空白处。</h4>
+				<img src="../img/howToJava_5.jpg" />
+				<br /><br />
+				<h4>(2)单击后，地址栏显示为JDK的完整路径，复制该完整路径。</h4>
+				<img src="../img/howToJava_6.jpg" />
+				<br /><br />
+				<h2 id="si">四、配置环境变量</h2>
+				<br />
+				<h3 id="4.1">1.打开"环境变量"窗口</h3>
+				<br />
+				<h4>(1)左侧"此电脑"右击-->属性。</h4>
+				<img src="../img/howToJava_7.jpg" />
+				<br /><br />
+				<h4>(2)页面滚动到最下面，单击"高级系统设置"。</h4>
+				<img src="../img/howToJava_8.jpg" />
+				<br /><br />
+				<h4>(3)依次单击"高级"-->"环境变量"。</h4>
+				<img src="../img/howToJava_9.jpg" />
+				<br /><br />
+				<h3 id="4.2">2.新建JAVA_HOME变量</h3>
+				<br />
+				<h4>单击"系统变量"下方的"新建"按钮，在弹出的"新建系统变量"窗口中分别填写。<br />其中变量名是固定的：JAVA_HOME
+					。变量值粘贴刚才复制的完整路径。<br />然后单击确定。</h4>
+				<img src="../img/howToJava_10.jpg" />
+				<br /><br />
+				<h3 id="4.3">3.修改Path变量</h3>
+				<br />
+				<h4>(1)双击"系统变量"中的"Path"变量，在弹出的"编辑环境变量"窗口中单击"新建"。</h4>
+				<img src="../img/howToJava_11.jpg" /><br /><br />
+				<h4>(2)填入内容：%JAVA_HOME%\bin ，然后单击确定，回到"环境变量"窗口。</h4>
+				<img src="../img/howToJava_12.jpg" />
+				<br /><br />
+				<h3 id="4.4">4.两次"确定"</h3>
+				<br />
+				<h4>在"环境变量"窗口单击"确定"，回到"系统属性"窗口。</h4>
+				<h4>在"系统属性"窗口单击"确定"。</h4>
+				<br /><br />
+				<h2 id="wu">五、下载JAVA开发环境Eclipse</h2>
+				<br />
+				<a class="layui-btn layui-btn-primary" href="../file/softs/eclipse.zip">下载eclipse</a>
+				<br /><br /><br />
+				<h2 id="liu">六、手动安装Eclipse</h2>
+				<br />
+				<h3 id="6.1">1.使用资源管理器解压Eclipse文件(速度较慢，建议使用其他解压软件)</h3>
+				<br />
+				<h4>(1)在下载好的Eclipse压缩包上右击-->打开方式-->Windows资源管理器。</h4>
+				<img src="../img/howToJava_13.jpg" />
+				<br /><br />
+				<h4>(2)在窗口上方功能区中单击"全部解压缩"。</h4>
+				<img src="../img/howToJava_14.jpg" />
+				<br /><br />
+				<h4>(3)单击"浏览"，选择第一步建立的文件夹 C:\Program Files (x86)\Java ，单击"提取"。</h4>
+				<img src="../img/howToJava_4.jpg" />
+				<br /><br />
+				<h3 id="6.2">2.创建桌面快捷方式</h3>
+				<br />
+				<h4>打开Windows资源管理器，找到提取出的文件，进入文件夹内。在eclipse程序文件上右击-->发送到-->桌面快捷方式</h4>
+				<img src="../img/howToJava_15.jpg" />
+				<br /><br />
+				<h3 id="6.3">3.设置工作目录</h3>
+				<br />
+				<h4>(1)双击桌面出现的快捷方式，若JDK安装无误，将出现启动画面。</h4>
+				<img src="../img/howToJava_16.jpg" />
+				<br /><br />
+				<h4>(2)稍等片刻，进入设置工作目录窗口，保持默认单击OK即可。将会创建workspace文件夹。</h4>
+				<img src="../img/howToJava_17.jpg">
+				<br /><br />
+				<h3 id="6.4">4.取消"每次欢迎"</h3>
+				<br />
+				<h4>成功进入eclipse。可根据个人习惯在右下角取消勾选"Always show Welcome at start up"。<br />单击左上角附近的x关闭欢迎页面。</h4>
+			</div>
+			<iframe src="../page/footer.html" frameborder="0"></iframe>
+		</div>
+		<script src="../style/layui/layui.js" charset="utf-8"></script>
+		<script>
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+		</script>
+		<script>
+			layui.use('layer', function() {
+				var layer = layui.layer;
+				layer.open({
+					type: 1,
+					shade: 0,
+					title: '目录',
+					content: '<ul>' +
+						'	<li><a href="#yi">一、新建文件夹</a></li>' +
+						'	<li><a href="#er">二、下载JDK</a></li>' +
+						'	<li><a href="#san">三、手动安装JDK</a></li>' +
+						'	<li><a href="#3.1">>1.解压文件</a></li>' +
+						'	<li><a href="#3.2">>2.复制路径</a></li>' +
+						'	<li><a href="#si">四、配置环境变量</a></li>' +
+						'	<li><a href="#4.1">>1.打开"环境变量"窗口</a></li>' +
+						'	<li><a href="#4.2">>2.新建JAVA_HOME变量</a></li>' +
+						'	<li><a href="#4.3">>3.修改Path变量</a></li>' +
+						'	<li><a href="#4.4">>4.两次"确定"</a></li>' +
+						'	<li><a href="#wu">五、下载Eclipse</a></li>' +
+						'	<li><a href="#liu">六、手动安装Eclipse</a></li>' +
+						'	<li><a href="#6.1">>1.解压文件</a></li>' +
+						'	<li><a href="#6.2">>2.创建桌面快捷方式</a></li>' +
+						'	<li><a href="#6.3">>3.设置工作目录</a></li>' +
+						'	<li><a href="#6.4">>4.取消"每次欢迎"</a></li>' +
+						'</ul>',
+					offset: 'r',
+					closeBtn: 0,
+					anim: 2,
+					resize: false,
+					area: ['200px', '300px'],
+					id: 'menu'
+				});
+			});
+		</script>
+	</body>
+</html>

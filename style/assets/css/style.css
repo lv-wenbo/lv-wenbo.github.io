@@ -1,0 +1,21 @@
+.circle {
+	margin:0 auto;
+	position: relative;
+}
+
+/* 圆圈中的文字属性 */
+.circle span {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	right: 0;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+	color: #130f40
+}
+
+/* 圆圈下的文字属性 */
+.skill-single h6{
+	color: #130f40;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Eclipse中的Tomcat配置详解</title>
+		<link rel="stylesheet" href="../style/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="../style/style.css" media="all" />
+	</head>
+	<body>
+		<div class="page">
+			<ul class="layui-nav">
+				<div class="nav">
+					<li style="float:left"><img src="../img/logo.png" style="width:217px;height:40px;margin:10px;" />
+					</li>
+					<li class="layui-nav-item"><a href="../index.html">首页</a></li>
+					<li class="layui-nav-item"><a href="../page/all.html">全部文章</a></li>
+					<li class="layui-nav-item"><a href="../page/download.html">资源下载</a></li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">小工具</a>
+						<dl class="layui-nav-child">
+							<dd><a href="../tools/llxs.html" target="_blank">流量消失器</a></dd>
+							<dd><a href="../layui/layui.html" target="_blank">layui镜像站</a></dd>
+							<dd><a href="../tools/dns.html" target="_blank">全国DNS表</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item"><a href="../page/about.html">关于</a></li>
+				</div>
+			</ul>
+			<div class="main">
+				<h1>Eclipse中的Tomcat配置详解</h1><br /><br />
+				<h2 id="yi">一、先安装好Eclipse和JDK</h2>
+				<br />
+				<h4>点击查看<a href="howToJava.html" style="color: #007DDB;">如何创建Java开发环境</a></h4>
+				<br /><br />
+				<h2 id="er">二、下载Tomcat</h2>
+				<br />
+				<a class="layui-btn layui-btn-primary" href="../file/tomcat9.zip">下载tomcat9</a>
+				<br /><br /><br />
+				<h2 id="san">三、解压Tomcat</h2>
+				<br />
+				<h4>(1)在下载好的Tomcat压缩包上右击-->打开方式-->Windows资源管理器。</h4>
+				<img src="../img/howToTomcat_1.jpg" />
+				<br /><br />
+				<h4>(2)在窗口上方功能区中单击"全部解压缩"。</h4>
+				<img src="../img/howToTomcat_2.jpg" />
+				<br /><br />
+				<h4>(3)单击"浏览"，选择创建Java开发环境时建立的文件夹 C:\Program Files (x86)\Java ，单击"提取"。</h4>
+				<img src="../img/howToJava_4.jpg" />
+				<br /><br /><br />
+				<h2 id="si">四、在Eclipse中配置Tomcat</h2>
+				<br />
+				<h4>(1)打开Eclipse，在菜单栏中单击Window，然后单击Preferences，打开首选项页面。</h4>
+				<img src="../img/howToTomcat_3.jpg" />
+				<br /><br />
+				<h4>(2)展开Server，单击Runtime Environments，然后单击Add新建服务器。</h4>
+				<img src="../img/howToTomcat_4.jpg" />
+				<br /><br />
+				<h4>(3)选择合适的服务器版本，本文使用的版本为Tomcat 9.0，然后单击next继续。</h4>
+				<img src="../img/howToTomcat_5.jpg" />
+				<br /><br />
+				<h4>(4)单击Browse，找到并选择Tomcat解压路径 C:\Program Files (x86)\Java\tomcat9 ，然后单击finish完成。</h4>
+				<img src="../img/howToTomcat_6.jpg" />
+				<br /><br />
+				<h4>(5)回到首选项页面，此时可以看到列表中成功添加了一项Tomcat 9.0，单击OK，至此配置完毕。</h4>
+				<img src="../img/howToTomcat_7.jpg" />
+				<br /><br /><br />
+				<h2 id="wu">五、修改项目的Bulid Path</h2>
+				<p>如果在配置Tomcat前已经创建或导入了项目，就需要手动配置项目的Build Path，否则Tomcat不起作用。</p>
+				<br />
+				<h4>(1)右击项目名称，依次选择Build Path --> Configure Build Path。</h4>
+				<img src="../img/howToTomcat_8.jpg" />
+				<br /><br />
+				<h4>(2)单击Libraries选项卡，然后单击Add Library。</h4>
+				<img src="../img/howToTomcat_9.jpg" />
+				<br /><br />
+				<h4>(3)单击Server Runtime，然后单击next继续。</h4>
+				<img src="../img/howToTomcat_10.jpg" />
+				<br /><br />
+				<h4>(4)单击刚才配置的Tomcat 9.0 ，然后单击finish完成。</h4>
+				<img src="../img/howToTomcat_11.jpg" />
+				<br /><br />
+				<h4>(5)回到Build Path页面，单击OK完成设置。</h4>
+				<img src="../img/howToTomcat_12.jpg" />
+			</div>
+			<iframe src="../page/footer.html" frameborder="0"></iframe>
+		</div>
+		<script src="../style/layui/layui.js" charset="utf-8"></script>
+		<script>
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+		</script>
+		<script>
+			layui.use('layer', function() {
+				var layer = layui.layer;
+				layer.open({
+					type: 1,
+					shade: 0,
+					title: '目录',
+					content: '<ul>' +
+						'	<li><a href="#yi">一、装好JAVA开发环境</a></li>' +
+						'	<li><a href="#er">二、下载Tomcat</a></li>' +
+						'	<li><a href="#san">三、解压Tomcat</a></li>' +
+						'	<li><a href="#si">四、配置Tomcat</a></li>' +
+						'	<li><a href="#wu">五、修改Bulid Path</a></li>' +
+						'</ul>',
+					offset: 'r',
+					closeBtn: 0,
+					anim: 2,
+					resize: false,
+					area: ['200px', '300px'],
+					id: 'menu'
+				});
+			});
+		</script>
+	</body>
+</html>
